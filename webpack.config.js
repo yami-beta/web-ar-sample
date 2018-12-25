@@ -7,7 +7,7 @@ let publicPath = "/";
 module.exports = {
   mode: "development",
   entry: {
-    index: [path.join(__dirname, "src", "index.tsx")]
+    index: [path.join(__dirname, "src", "index.js")]
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -15,20 +15,21 @@ module.exports = {
     publicPath
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"]
+    extensions: [".js", ".jsx"]
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx|js|jsx)$/,
-        use: ["ts-loader"],
+        test: /\.(js|jsx)$/,
+        use: ["babel-loader"],
         exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html")
+      template: path.join(__dirname, "src", "index.html"),
+      inject: "head"
     }),
     new CopyWebpackPlugin([
       {
