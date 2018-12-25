@@ -1,4 +1,4 @@
-# web-ar-sample
+# webar-sample
 
 - A-Frame
 - AR.js
