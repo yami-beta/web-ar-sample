@@ -1,8 +1,8 @@
 {
-  "name": "web-ar-sample",
+  "name": "webar-sample",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "ssh://git@github.com/yami-beta/web-ar-sample",
+  "repository": "ssh://git@github.com/yami-beta/webar-sample",
   "author": "yami-beta <yami-beta@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
