@@ -10,7 +10,7 @@
         padding: 0;
         overflow: hidden;
       }
-      #frame {
+      #marker-event-frame {
         position: absolute;
         top: 0;
         left: 0;
@@ -19,13 +19,13 @@
         box-sizing: border-box;
         border: 4px solid transparent;
       }
-      #frame.found-marker {
+      #marker-event-frame.found-marker {
         border-color: red;
       }
     </style>
   </head>
   <body style="margin: 0px; overflow: hidden;">
-    <div id="frame"></div>
+    <div id="marker-event-frame"></div>
     <a-scene embedded arjs="debugUIEnabled: false;">
       <a-marker preset="hiro">
         <a-box
@@ -44,7 +44,7 @@
           ></a-animation>
         </a-box>
       </a-marker>
-      <a-marker preset="custom" type="pattern" url="pattern-marker.patt" emitevents="true">
+      <a-marker preset="custom" type="pattern" url="pattern-marker.patt" emitevents="true" handle-marker-event>
         <a-entity
           position="0 0 1"
           rotation="0 -90 90"
